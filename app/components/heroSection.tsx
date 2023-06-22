@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { Box, useColorModeValue, Text, Heading, Image } from "@chakra-ui/react";
-import heroImage from "../images/heroImage.png";
 
 export default function Hero({ children }: { children: React.ReactNode }) {
   return (
@@ -14,10 +13,10 @@ export default function Hero({ children }: { children: React.ReactNode }) {
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col w-1/2">
+      <Box title="leftSideArea" className="flex flex-col w-1/2 items-center ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full "
+          className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  ml-16"
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
@@ -45,13 +44,17 @@ export default function Hero({ children }: { children: React.ReactNode }) {
           <span className="ml-40">My ode to homegrown, human solutions.</span>
         </Text>
       </Box>
-      <Box title="rightSideArea" className="flex flex-col w-1/2  items-center">
+      <Box title="rightSideArea" className="flex flex-col w-1/2  items-center ">
         <Image
           src="/images/heroImage.png"
           alt="Image of phone and content falling out."
           className="flex flex-col"
           width={480}
         />
+        <Text className="font-Inter font-light text-base text-white w-529 h-46 max-w-full">
+          {" "}
+          image ~ https://craftwork.design/downloads/ultima/
+        </Text>
       </Box>
     </Box>
   );
