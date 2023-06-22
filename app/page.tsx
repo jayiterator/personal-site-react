@@ -6,6 +6,7 @@ import Hero from "./components/heroSection";
 import Nav from "./components/navbar";
 import ProjectLeftSection from "./components/projectLeftSection";
 import ProjectRightSection from "./components/projectRightSection";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
     // </main>
 
     <Box
-      className="flex min-h-screen flex-col items-center p-24 "
+      className="flex min-h-screen flex-col items-center p-20 pt-5 "
       bg={useColorModeValue("gray.100", "#050017")}
     >
       <Nav />

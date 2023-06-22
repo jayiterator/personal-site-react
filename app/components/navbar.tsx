@@ -114,13 +114,11 @@ export default function Nav() {
                   </Center>
                   <br />
                   <Center>
-                    <p>
-                      {colorMode === "light" ? (
-                        <LightModeText>Username</LightModeText>
-                      ) : (
-                        <DarkModeText type="standard">Username</DarkModeText>
-                      )}
-                    </p>
+                    {colorMode === "light" ? (
+                      <LightModeText>Username</LightModeText>
+                    ) : (
+                      <DarkModeText type="standard">Username</DarkModeText>
+                    )}
                   </Center>
                   <br />
                   <MenuDivider />
