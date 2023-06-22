@@ -43,7 +43,12 @@ export default function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} w={"full"}>
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={4}
+        w={"full"}
+        borderRadius={15}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
             {colorMode === "light" ? (

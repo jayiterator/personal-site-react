@@ -1,6 +1,11 @@
 "use client";
 
+import { Box, useColorModeValue } from "@chakra-ui/react";
+import Footer from "./components/footer";
+import Hero from "./components/heroSection";
 import Nav from "./components/navbar";
+import ProjectLeftSection from "./components/projectLeftSection";
+import ProjectRightSection from "./components/projectRightSection";
 
 export default function Home() {
   return (
@@ -16,8 +21,16 @@ export default function Home() {
     //   </div>
     // </main>
 
-    <div className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#050017]">
+    <Box
+      className="flex min-h-screen flex-col items-center p-24 "
+      bg={useColorModeValue("gray.100", "#050017")}
+    >
       <Nav />
-    </div>
+      <Hero>{}</Hero>
+      <ProjectLeftSection>{}</ProjectLeftSection>
+      <ProjectRightSection>{}</ProjectRightSection>
+      <ProjectLeftSection>{}</ProjectLeftSection>
+      <Footer>{}</Footer>
+    </Box>
   );
 }
