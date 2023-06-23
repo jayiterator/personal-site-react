@@ -1,10 +1,17 @@
 import { ReactNode } from "react";
 import { Box, useColorModeValue, Text, Image, Heading } from "@chakra-ui/react";
-
 export default function ProjectLeftSection({
   children,
+  blurbText,
+  techStack,
+  projectTitle,
+  projectImage,
 }: {
   children: React.ReactNode;
+  blurbText: string;
+  techStack: string;
+  projectTitle: string;
+  projectImage: string;
 }) {
   return (
     <Box
@@ -19,7 +26,7 @@ export default function ProjectLeftSection({
 
       <Box title="leftSideArea" className="flex flex-col w-1/2  items-center ">
         <Image
-          src="/images/100DaysImages.png"
+          src={projectImage}
           alt="Image of three developed phone app screens."
           className="flex flex-col"
           width={480}
@@ -32,7 +39,7 @@ export default function ProjectLeftSection({
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
-          100 Days (React Native)
+          {projectTitle}
         </Heading>
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
@@ -45,7 +52,7 @@ export default function ProjectLeftSection({
         </Text>
         <Box className="ml-16">
           <Image
-            src="/images/100DaysStack.png"
+            src={techStack}
             alt="Image of three developed phone app screens."
             className="flex flex-col"
             width={480}
@@ -59,13 +66,7 @@ export default function ProjectLeftSection({
           Blurb:
           <br />
           <br />
-          The 100 Days of Mindfulness project was designed and built for a
-          client encapsulating a meditation program into a mobile application
-          for Android and iOS on React Native. I built v1.0 of the app deployed
-          to Android and iOS internal distribution. This app needed to be
-          deployed both inside and outside China, and so back-ends were built
-          and hosted on both AWS Amplify and Tencent Cloud. This was my first
-          solo outing in React Native.
+          {blurbText}
         </Text>
       </Box>
     </Box>

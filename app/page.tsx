@@ -7,6 +7,7 @@ import Nav from "./components/navbar";
 import ProjectLeftSection from "./components/projectLeftSection";
 import ProjectRightSection from "./components/projectRightSection";
 import { Suspense } from "react";
+import AboutSection from "./components/aboutSection";
 
 export default function Home() {
   return (
@@ -28,9 +29,36 @@ export default function Home() {
     >
       <Nav />
       <Hero>{}</Hero>
-      <ProjectLeftSection>{}</ProjectLeftSection>
-      <ProjectRightSection>{}</ProjectRightSection>
-      <ProjectLeftSection>{}</ProjectLeftSection>
+      <ProjectLeftSection
+        blurbText="The 100 Days of Mindfulness project was designed and built for a
+          client encapsulating a meditation program into a mobile application
+          for Android and iOS on React Native. I built v1.0 of the app deployed
+          to Android and iOS internal distribution. This app needed to be
+          deployed both inside and outside China, and so back-ends were built
+          and hosted on both AWS Amplify and Tencent Cloud. This was my first
+          solo outing in React Native."
+        techStack={"/images/100DaysStack.png"}
+        projectTitle={"100 Days (React Native)"}
+        projectImage={"/images/100DaysImages.png"}
+      >
+        {}
+      </ProjectLeftSection>
+      <ProjectRightSection
+        blurbText={""}
+        techStack={""}
+        projectTitle={""}
+        projectImage={""}
+      >
+        {}
+      </ProjectRightSection>
+      <AboutSection
+        blurbText={""}
+        techStack={""}
+        projectTitle={""}
+        projectImage={""}
+      >
+        {}
+      </AboutSection>
       <Footer>{}</Footer>
     </Box>
   );
