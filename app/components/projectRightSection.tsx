@@ -18,14 +18,14 @@ export default function ProjectRightSection({
     <Box
       borderWidth={1}
       borderColor={useColorModeValue("gray.500", "gray.700")}
-      h={700}
+      h={500}
       w={"full"}
       marginTop={10}
       className="flex flex-row"
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col w-1/2  items-center ">
+      <Box title="leftSideArea" className="flex flex-col w-1/2 ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
           className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  ml-16"
@@ -62,7 +62,7 @@ export default function ProjectRightSection({
           {blurbText}
         </Text>
       </Box>
-      <Box title="rightSideArea" className="flex flex-col w-1/2 ">
+      <Box title="rightSideArea" className="flex flex-col w-1/2 items-center ">
         <Image
           src={projectImage}
           alt="Image of three developed phone app screens."

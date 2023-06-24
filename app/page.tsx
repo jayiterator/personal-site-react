@@ -44,10 +44,14 @@ export default function Home() {
         {}
       </ProjectLeftSection>
       <ProjectRightSection
-        blurbText={""}
-        techStack={""}
-        projectTitle={""}
-        projectImage={""}
+        blurbText="The C Project was a major group project from my
+        penultimate semester of my Masters of IT - Software Development program.
+        My personal contributions to the project focused on the site
+        administration area including a bespoke loader for embedded links to
+        musical pieces and a site message management system."
+        techStack={"/images/CStack.png"}
+        projectTitle={"C Project (React and NextJS)"}
+        projectImage={"/images/CImages.png"}
       >
         {}
       </ProjectRightSection>

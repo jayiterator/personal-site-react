@@ -31,13 +31,10 @@ export default function AboutSection({
     >
       {children}
 
-      <Box
-        title="leftSideArea"
-        className="flex flex-col basis-1/3 border-2 border-white "
-      >
+      <Box title="leftSideArea" className="flex flex-col basis-1/3  ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full  "
+          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full pl-5 "
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
@@ -78,13 +75,14 @@ export default function AboutSection({
           </Box>
         </Box>
       </Box>
-      <Box title="middleArea" className=" basis-2/5 border-2 border-white">
+      <Box title="middleArea" className=" basis-1/2 ">
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className=" font-Inter font-regular text-l text-white w-750 h-427 max-w-full"
+          className=" font-Inter font-regular text-l text-white w-750 h-427 max-w-full pt-5"
           wordBreak={"break-word"}
         >
           I’m a globe-trotting technologist.
+          <br />
           <br />
           Born and raised in the twin-island republic of Trinidad and Tobago,
           I’ve studied, lived and work in Massachusetts at Amherst College. From
@@ -120,12 +118,12 @@ export default function AboutSection({
       </Box>
       <Box
         title="rightSideArea"
-        className="flex flex-col w-1/2 items-center justify-end border-2 border-white"
+        className="flex flex-col w-1/2 items-center justify-end "
       >
         <Image
           src="/images/About2.png"
           alt="Image of Me."
-          className="flex flex-col"
+          className="flex flex-col pb-5"
           width={350}
         />
       </Box>

@@ -12,7 +12,7 @@ export default function DarkModeText({
       {children}
     </Text>
   ) : (
-    <Text className="font-inter font-semibold text-base text-yellow-300">
+    <Text className="font-inter font-semibold text-base text-[#FFC700]">
       {children}
     </Text>
   );
