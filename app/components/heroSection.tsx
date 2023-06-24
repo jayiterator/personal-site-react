@@ -1,5 +1,12 @@
 import { ReactNode } from "react";
-import { Box, useColorModeValue, Text, Heading, Image } from "@chakra-ui/react";
+import {
+  Box,
+  useColorModeValue,
+  Text,
+  Heading,
+  Image,
+  Button,
+} from "@chakra-ui/react";
 
 export default function Hero({ children }: { children: React.ReactNode }) {
   return (
@@ -24,7 +31,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
         </Heading>
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-3/4  p-2 font-Inter font-regular text-l text-white w-750 h-427 max-w-full "
+          className=" p-2 font-Inter font-regular text-l text-white w-750 h-427 max-w-full "
           wordBreak={"break-word"}
         >
           Hi!
@@ -34,15 +41,43 @@ export default function Hero({ children }: { children: React.ReactNode }) {
           <br />
           <br />
           Here you will find:
-          <br />
-          <br />
-          <span className="ml-20">
-            A collection of simple, digital things made well.
-          </span>
-          <br />
-          <br />
-          <span className="ml-40">My ode to homegrown, human solutions.</span>
         </Text>
+        <Box className="ml-20 pt-5">
+          A collection of simple, digital things made well.
+        </Box>
+        <br />
+        <Box className="ml-40 pt-5">My ode to homegrown, human solutions.</Box>
+        <Box className="flex flex-row mt-5  w-full justify-evenly">
+          <Box
+            width="200px"
+            height="73px"
+            backgroundColor={"#50FFAF"}
+            borderColor={"#050017"}
+            borderRadius={50}
+            color={"#050017"}
+          >
+            <Button
+              width="200px"
+              height="73px"
+              variant="solid"
+              backgroundColor={"#50FFAF"}
+              borderColor={"#050017"}
+              borderRadius={50}
+              color={"#050017"}
+            >
+              Things
+            </Button>
+          </Box>
+          <Button
+            width="200px"
+            height="73px"
+            variant="outline"
+            borderColor={"#0030DD"}
+            borderRadius={50}
+          >
+            Me
+          </Button>
+        </Box>
       </Box>
       <Box title="rightSideArea" className="flex flex-col w-1/2  items-center ">
         <Image

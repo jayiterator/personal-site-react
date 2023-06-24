@@ -37,33 +37,46 @@ export default function AboutSection({
       >
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  "
+          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full  "
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
           About
         </Heading>
-        <Image
-          src="/images/About1.png"
-          alt="Image of Me."
-          className="flex flex-col"
-          width={200}
-        />
-        <Image
-          src="/images/LinkedIn.png"
-          alt="Image of Me."
-          className="flex flex-col"
-          width={120}
-        />
-
-        <Button
-          width="200px"
-          height="73px"
-          variant="outline"
-          borderColor={"#0030DD"}
-        >
-          Button
-        </Button>
+        <Box className="basis-7/8 py-5 items-center flex flex-col ">
+          <Image
+            src="/images/About1.png"
+            alt="Image of Me."
+            className="flex flex-col mb-28"
+            width={200}
+          />
+          <Image
+            src="/images/LinkedIn.png"
+            alt="Image of Me."
+            className="flex flex-col mb-6"
+            width={120}
+          />
+          <Box
+            width="200px"
+            height="73px"
+            // backgroundColor={"#0030DD"}
+            borderColor={"#0030DD"}
+            borderRadius={50}
+            borderWidth={2}
+          >
+            <Button
+              width="200px"
+              height="73px"
+              variant="solid"
+              colorScheme="blue"
+              borderColor={"#0030DD"}
+              borderRadius={50}
+              color={"white"}
+            >
+              Check out my LinkedIn
+            </Button>
+          </Box>
+        </Box>
       </Box>
       <Box title="middleArea" className=" basis-2/5 border-2 border-white">
         <Text
@@ -71,7 +84,7 @@ export default function AboutSection({
           className=" font-Inter font-regular text-l text-white w-750 h-427 max-w-full"
           wordBreak={"break-word"}
         >
-          <Box>I’m a globe-trotting technologist.</Box>
+          I’m a globe-trotting technologist.
           <br />
           Born and raised in the twin-island republic of Trinidad and Tobago,
           I’ve studied, lived and work in Massachusetts at Amherst College. From
@@ -85,7 +98,9 @@ export default function AboutSection({
           reside and am building my career.
           <br />
           <br />
-          <Box className="text-center">People give technology meaning.</Box>
+        </Text>
+        <Box className="text-center">People give technology meaning.</Box>
+        <Text>
           <br />
           I build for people. Sometimes that person is myself, and other times
           its a client or a small company, but there’s always a person with a
@@ -94,7 +109,9 @@ export default function AboutSection({
           suit the human purposes we give it.
           <br />
           <br />
-          <Box className="text-right">I build simple things, well.</Box>
+        </Text>
+        <Box className="text-right">I build simple things, well.</Box>
+        <Text>
           <br />I love to make things, and given the choice to build something,
           I’ll always start simple. As I’ve grown in my technology practice,
           I’ve become more and more passionate about simple, quality products
@@ -103,8 +120,15 @@ export default function AboutSection({
       </Box>
       <Box
         title="rightSideArea"
-        className="flex flex-col w-1/2  border-2 border-white"
-      ></Box>
+        className="flex flex-col w-1/2 items-center justify-end border-2 border-white"
+      >
+        <Image
+          src="/images/About2.png"
+          alt="Image of Me."
+          className="flex flex-col"
+          width={350}
+        />
+      </Box>
     </Box>
   );
 }
