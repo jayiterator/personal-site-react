@@ -20,33 +20,43 @@ export default function Hero({ children }: { children: React.ReactNode }) {
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col w-1/2 items-center ">
+      <Box title="leftSideArea" className="flex flex-col w-1/2 items-center  ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  ml-16"
+          className="basis-1/4 p-2 font-Inter w-11/12 font-bold text-6xl max-w-full ml-16"
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
           Simple Things, Done Well
         </Heading>
-        <Text
-          color={useColorModeValue("#050017", "#FFC700")}
-          className=" p-2 font-Inter font-regular text-l text-white w-750 h-427 max-w-full "
-          wordBreak={"break-word"}
-        >
-          Hi!
+        <Box className="basis-1/2 w-11/12 max-w-full ml-20">
+          <Text
+            color={useColorModeValue("#050017", "#FFC700")}
+            className="font-Inter font-regular text-l w-700 h-427 max-w-full mt-5    "
+            wordBreak={"break-word"}
+          >
+            Hi!
+            <br />
+            <br />
+            My name is Jayson. This is my personal website.
+            <br />
+            <br />
+            Here you will find:
+          </Text>
+          <Box
+            className="text-center pt-5"
+            color={useColorModeValue("#050017", "#FFC700")}
+          >
+            A collection of simple, digital things made well.
+          </Box>
           <br />
-          <br />
-          My name is Jayson. This is my personal website.
-          <br />
-          <br />
-          Here you will find:
-        </Text>
-        <Box className="ml-20 pt-5">
-          A collection of simple, digital things made well.
+          <Box
+            className="text-right pt-5"
+            color={useColorModeValue("#050017", "#FFC700")}
+          >
+            My ode to homegrown, human solutions.
+          </Box>
         </Box>
-        <br />
-        <Box className="ml-40 pt-5">My ode to homegrown, human solutions.</Box>
         <Box className="flex flex-row mt-5  w-full justify-evenly">
           <Box
             width="200px"
@@ -75,7 +85,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
             borderColor={"#0030DD"}
             borderRadius={50}
           >
-            Me
+            About
           </Button>
         </Box>
       </Box>

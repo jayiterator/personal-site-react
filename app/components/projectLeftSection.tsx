@@ -43,10 +43,10 @@ export default function ProjectLeftSection({
         </Heading>
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className="p-2 font-Inter font-regular text-l text-white w-750 h-427 max-w-full ml-16"
+          className="p-2 font-Inter font-regular text-l w-750 h-427 max-w-full ml-14"
           wordBreak={"break-word"}
         >
-          Tech Stack:
+          Stack:
           <br />
           <br />
         </Text>
@@ -60,11 +60,9 @@ export default function ProjectLeftSection({
         </Box>
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className="pt-4 p-2 font-Inter font-regular text-l text-white w-750 h-427 max-w-full ml-16"
+          className="pt-4 p-2 font-Inter font-regular text-l w-750 h-427 max-w-full ml-14"
           wordBreak={"break-word"}
         >
-          Blurb:
-          <br />
           <br />
           {blurbText}
         </Text>

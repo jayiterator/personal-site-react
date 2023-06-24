@@ -24,7 +24,7 @@ export default function AboutSection({
     <Box
       borderWidth={1}
       borderColor={useColorModeValue("gray.500", "gray.700")}
-      h={700}
+      h={650}
       w={"full"}
       marginTop={10}
       className="flex flex-row"
@@ -34,13 +34,13 @@ export default function AboutSection({
       <Box title="leftSideArea" className="flex flex-col basis-1/3  ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full pl-5 "
+          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full pl-5 ml-16"
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
           About
         </Heading>
-        <Box className="basis-7/8 py-5 items-center flex flex-col ">
+        <Box className="basis-7/8 py-5 items-center flex flex-col ml-10 ">
           <Image
             src="/images/About1.png"
             alt="Image of Me."
@@ -68,17 +68,17 @@ export default function AboutSection({
               colorScheme="blue"
               borderColor={"#0030DD"}
               borderRadius={50}
-              color={"white"}
+              color={useColorModeValue("#050017", "#FFC700")}
             >
               Check out my LinkedIn
             </Button>
           </Box>
         </Box>
       </Box>
-      <Box title="middleArea" className=" basis-1/2 ">
+      <Box title="middleArea" className=" basis-1/2 pt-16 ">
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className=" font-Inter font-regular text-l text-white w-750 h-427 max-w-full pt-5"
+          className=" font-Inter font-regular text-sm w-750 h-427 max-w-full pt-5"
           wordBreak={"break-word"}
         >
           I’m a globe-trotting technologist.
@@ -97,28 +97,42 @@ export default function AboutSection({
           <br />
           <br />
         </Text>
-        <Box className="text-center">People give technology meaning.</Box>
-        <Text>
-          <br />
+        <Box
+          className="text-center text-sm"
+          color={useColorModeValue("#050017", "#FFC700")}
+        >
+          People give technology meaning.
+        </Box>
+        <Text
+          className=" font-Inter font-regular text-sm w-750 h-427 max-w-full pt-5"
+          color={useColorModeValue("#050017", "#FFC700")}
+        >
           I build for people. Sometimes that person is myself, and other times
           its a client or a small company, but there’s always a person with a
           problem to solve behind the things I love to build. Technology has no
           inherent meaning--and we should love and judge it for its ability to
           suit the human purposes we give it.
           <br />
-          <br />
         </Text>
-        <Box className="text-right">I build simple things, well.</Box>
-        <Text>
-          <br />I love to make things, and given the choice to build something,
-          I’ll always start simple. As I’ve grown in my technology practice,
-          I’ve become more and more passionate about simple, quality products
-          with purpose.
+        <Box
+          className="text-right text-sm"
+          color={useColorModeValue("#050017", "#FFC700")}
+        >
+          I build simple things, well.
+        </Box>
+        <Text
+          className=" font-Inter font-regular text-sm w-750 h-427 max-w-full pt-5"
+          color={useColorModeValue("#050017", "#FFC700")}
+        >
+          I love to make things, and given the choice to build something, I’ll
+          always start simple. As I’ve grown in my technology practice, I’ve
+          become more and more passionate about simple, quality products with
+          purpose.
         </Text>
       </Box>
       <Box
         title="rightSideArea"
-        className="flex flex-col w-1/2 items-center justify-end "
+        className="flex flex-col w-1/2 items-center justify-end mb-10 "
       >
         <Image
           src="/images/About2.png"
