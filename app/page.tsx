@@ -40,6 +40,7 @@ export default function Home() {
         techStack={"/images/100DaysStack.png"}
         projectTitle={"100 Days (React Native)"}
         projectImage={"/images/100DaysImages.png"}
+        id="Project1"
       >
         {}
       </ProjectLeftSection>

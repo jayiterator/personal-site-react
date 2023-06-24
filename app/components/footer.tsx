@@ -16,7 +16,13 @@ import DarkModeHeader from "./dark/light/darkModeHeader";
 import LightModeText from "./dark/light/lightModeText";
 import DarkModeText from "./dark/light/darkModeText";
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({
+  children,
+  linkTo,
+}: {
+  children: ReactNode;
+  linkTo: string;
+}) => (
   <Link
     px={2}
     py={1}
@@ -25,7 +31,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    href={linkTo}
   >
     {children}
   </Link>
@@ -42,6 +48,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
       w={"full"}
       marginTop={10}
       className="flex flex-col"
+      id="footer"
     >
       {children}
       <Box className=" basis-1/5 px-5 w-3/4">
@@ -55,29 +62,29 @@ export default function Footer({ children }: { children: React.ReactNode }) {
           </Box>
 
           {colorMode === "light" ? (
-            <NavLink>
+            <NavLink linkTo="#Project1">
               <LightModeText>Things</LightModeText>
             </NavLink>
           ) : (
-            <NavLink>
+            <NavLink linkTo="#Project1">
               <DarkModeText type="schema">Things</DarkModeText>
             </NavLink>
           )}
           {colorMode === "light" ? (
-            <NavLink>
+            <NavLink linkTo="#about">
               <LightModeText>About</LightModeText>
             </NavLink>
           ) : (
-            <NavLink>
+            <NavLink linkTo="#about">
               <DarkModeText type="schema">About</DarkModeText>
             </NavLink>
           )}
           {colorMode === "light" ? (
-            <NavLink>
+            <NavLink linkTo="#footer">
               <LightModeText>Contact</LightModeText>
             </NavLink>
           ) : (
-            <NavLink>
+            <NavLink linkTo="#footer">
               <DarkModeText type="schema">Contact</DarkModeText>
             </NavLink>
           )}
@@ -87,21 +94,25 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         <Box className=" flex flex-row h-44 bg-[#F1F1F1] rounded-lg self-center basis-1/3">
           <Box className="flex flex-col basis-2/5 justify-around items-center py-5 ">
             <Box className="flex flex-row">
-              <Image
-                src="/images/LinkedIn.png"
-                alt="Image of Me."
-                className="flex flex-col mx-2"
-                width={10}
-              />
+              <Link href="https://www.linkedin.com/in/jayson-paul-63762b79/">
+                <Image
+                  src="/images/LinkedIn.png"
+                  alt="Image of Me."
+                  className="flex flex-col mx-2"
+                  width={10}
+                />
+              </Link>
               <Text className="text-black"> LinkedIn</Text>
             </Box>
             <Box className="flex flex-row">
-              <Image
-                src="/images/github.png"
-                alt="Image of Me."
-                className="flex flex-col mx-2"
-                width={10}
-              />
+              <Link href="https://github.com/jayiterator">
+                <Image
+                  src="/images/github.png"
+                  alt="Image of Me."
+                  className="flex flex-col mx-2"
+                  width={10}
+                />
+              </Link>
               <Text className="text-black"> Github</Text>
             </Box>
           </Box>
@@ -120,17 +131,19 @@ export default function Footer({ children }: { children: React.ReactNode }) {
               borderRadius={50}
               color={"#050017"}
             >
-              <Button
-                width="170px"
-                height="73px"
-                variant="solid"
-                backgroundColor={"#50FFAF"}
-                borderColor={"#050017"}
-                borderRadius={50}
-                color={"#050017"}
-              >
-                Email Me
-              </Button>
+              <Link href="mailto:jayson.nm.paul@hotmail.com">
+                <Button
+                  width="170px"
+                  height="73px"
+                  variant="solid"
+                  backgroundColor={"#50FFAF"}
+                  borderColor={"#050017"}
+                  borderRadius={50}
+                  color={"#050017"}
+                >
+                  Email Me
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>

@@ -6,12 +6,14 @@ export default function ProjectLeftSection({
   techStack,
   projectTitle,
   projectImage,
+  id,
 }: {
   children: React.ReactNode;
   blurbText: string;
   techStack: string;
   projectTitle: string;
   projectImage: string;
+  id: string;
 }) {
   return (
     <Box
@@ -21,6 +23,7 @@ export default function ProjectLeftSection({
       w={"full"}
       marginTop={10}
       className="flex flex-row"
+      id={id}
     >
       {children}
 

@@ -6,6 +6,7 @@ import {
   Image,
   Heading,
   Button,
+  Link,
 } from "@chakra-ui/react";
 export default function AboutSection({
   children,
@@ -28,6 +29,7 @@ export default function AboutSection({
       w={"full"}
       marginTop={10}
       className="flex flex-row"
+      id="about"
     >
       {children}
 
@@ -61,17 +63,19 @@ export default function AboutSection({
             borderRadius={50}
             borderWidth={2}
           >
-            <Button
-              width="200px"
-              height="73px"
-              variant="solid"
-              colorScheme="blue"
-              borderColor={"#0030DD"}
-              borderRadius={50}
-              color={useColorModeValue("#050017", "#FFC700")}
-            >
-              Check out my LinkedIn
-            </Button>
+            <Link href="https://www.linkedin.com/in/jayson-paul-63762b79/">
+              <Button
+                width="200px"
+                height="73px"
+                variant="solid"
+                colorScheme="blue"
+                borderColor={"#0030DD"}
+                borderRadius={50}
+                color={useColorModeValue("#050017", "#FFC700")}
+              >
+                Check out my LinkedIn
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Box>

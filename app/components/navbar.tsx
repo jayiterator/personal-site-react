@@ -23,7 +23,13 @@ import LightModeHeader from "./dark/light/lightModeHeader";
 import LightModeText from "./dark/light/lightModeText";
 import DarkModeText from "./dark/light/darkModeText";
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({
+  children,
+  linkTo,
+}: {
+  children: ReactNode;
+  linkTo: string;
+}) => (
   <Link
     px={2}
     py={1}
@@ -32,7 +38,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    href={linkTo}
   >
     {children}
   </Link>
@@ -48,6 +54,7 @@ export default function Nav() {
         px={4}
         w={"full"}
         borderRadius={15}
+        id="nav"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
@@ -61,29 +68,29 @@ export default function Nav() {
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
               {colorMode === "light" ? (
-                <NavLink>
+                <NavLink linkTo="#nav">
                   <LightModeText>Home</LightModeText>
                 </NavLink>
               ) : (
-                <NavLink>
+                <NavLink linkTo="#nav">
                   <DarkModeText type="schema">Home</DarkModeText>
                 </NavLink>
               )}
               {colorMode === "light" ? (
-                <NavLink>
+                <NavLink linkTo="#Project1">
                   <LightModeText>Things</LightModeText>
                 </NavLink>
               ) : (
-                <NavLink>
+                <NavLink linkTo="#Project1">
                   <DarkModeText type="schema">Things</DarkModeText>
                 </NavLink>
               )}
               {colorMode === "light" ? (
-                <NavLink>
+                <NavLink linkTo="#about">
                   <LightModeText>About</LightModeText>
                 </NavLink>
               ) : (
-                <NavLink>
+                <NavLink linkTo="#about">
                   <DarkModeText type="schema">About</DarkModeText>
                 </NavLink>
               )}

@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   Button,
+  Link,
 } from "@chakra-ui/react";
 
 export default function Hero({ children }: { children: React.ReactNode }) {
@@ -66,27 +67,31 @@ export default function Hero({ children }: { children: React.ReactNode }) {
             borderRadius={50}
             color={"#050017"}
           >
+            <Link href="#Project1">
+              <Button
+                width="200px"
+                height="73px"
+                variant="solid"
+                backgroundColor={"#50FFAF"}
+                borderColor={"#050017"}
+                borderRadius={50}
+                color={"#050017"}
+              >
+                Things
+              </Button>
+            </Link>
+          </Box>
+          <Link href="#about">
             <Button
               width="200px"
               height="73px"
-              variant="solid"
-              backgroundColor={"#50FFAF"}
-              borderColor={"#050017"}
+              variant="outline"
+              borderColor={"#0030DD"}
               borderRadius={50}
-              color={"#050017"}
             >
-              Things
+              About
             </Button>
-          </Box>
-          <Button
-            width="200px"
-            height="73px"
-            variant="outline"
-            borderColor={"#0030DD"}
-            borderRadius={50}
-          >
-            About
-          </Button>
+          </Link>
         </Box>
       </Box>
       <Box title="rightSideArea" className="flex flex-col w-1/2  items-center ">
