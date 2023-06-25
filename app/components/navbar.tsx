@@ -16,8 +16,9 @@ import {
   useColorMode,
   Center,
   Text,
+  IconButton,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import DarkModeHeader from "./dark/light/darkModeHeader";
 import LightModeHeader from "./dark/light/lightModeHeader";
 import LightModeText from "./dark/light/lightModeText";
@@ -39,6 +40,7 @@ const NavLink = ({
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
     href={linkTo}
+    color={useColorModeValue("#050017", "#FFC700")}
   >
     {children}
   </Link>
@@ -48,122 +50,85 @@ export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
-      <Box
-        bg={useColorModeValue("gray.100", "gray.900")}
-        px={4}
-        w={"full"}
-        borderRadius={15}
-        id="nav"
-      >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>
-            {colorMode === "light" ? (
-              <LightModeHeader>Simple Digital Things</LightModeHeader>
-            ) : (
-              <DarkModeHeader>Simple Digital Things</DarkModeHeader>
-            )}
-          </Box>
+    <Box
+      bg={useColorModeValue("gray.100", "gray.900")}
+      px={4}
+      w={"full"}
+      borderRadius={15}
+      id="nav"
+    >
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Box>
+          <Text
+            color={useColorModeValue("#050017", "#FFC700")}
+            className="font-inter font-bold text-lg w-700 h-179 max-w-full"
+            noOfLines={2}
+          >
+            Simple Digital Things
+          </Text>
+        </Box>
 
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
-              {colorMode === "light" ? (
-                <NavLink linkTo="#nav">
-                  <LightModeText>Home</LightModeText>
-                </NavLink>
-              ) : (
-                <NavLink linkTo="#nav">
-                  <DarkModeText type="schema">Home</DarkModeText>
-                </NavLink>
-              )}
-              {colorMode === "light" ? (
-                <NavLink linkTo="#Project1">
-                  <LightModeText>Things</LightModeText>
-                </NavLink>
-              ) : (
-                <NavLink linkTo="#Project1">
-                  <DarkModeText type="schema">Things</DarkModeText>
-                </NavLink>
-              )}
-              {colorMode === "light" ? (
-                <NavLink linkTo="#about">
-                  <LightModeText>About</LightModeText>
-                </NavLink>
-              ) : (
-                <NavLink linkTo="#about">
-                  <DarkModeText type="schema">About</DarkModeText>
-                </NavLink>
-              )}
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
+        <Flex alignItems={"center"}>
+          <Stack direction={"row"} spacing={7}>
+            <Box className=" hidden sm:max-2xl:flex">
+              <NavLink linkTo="#nav">
+                <Text className="font-inter font-bold text-lg w-700 h-179 max-w-full">
+                  Home
+                </Text>
+              </NavLink>
 
+              <NavLink linkTo="#Project1">
+                <Text className="font-inter font-bold text-lg w-700 h-179 max-w-full">
+                  Things
+                </Text>
+              </NavLink>
+
+              <NavLink linkTo="#about">
+                <Text className="font-inter font-bold text-lg w-700 h-179 max-w-full">
+                  About
+                </Text>
+              </NavLink>
+            </Box>
+
+            {/* md:max-xl:text-xl */}
+            <Box className=" flex sm:max-2xl:hidden ">
               <Menu>
                 <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
-                  />
-                </MenuButton>
+                  as={IconButton}
+                  aria-label="Options"
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                  color={useColorModeValue("#050017", "#FFC700")}
+                  size={"lg"}
+                />
                 <MenuList alignItems={"center"}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={"2xl"}
-                      src={"https://avatars.dicebear.com/api/male/username.svg"}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    {colorMode === "light" ? (
-                      <LightModeText>Username</LightModeText>
-                    ) : (
-                      <DarkModeText type="standard">Username</DarkModeText>
-                    )}
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  {colorMode === "light" ? (
-                    <>
-                      <MenuItem>
-                        <LightModeText>Your Servers</LightModeText>
-                      </MenuItem>
-                      <MenuItem>
-                        <LightModeText>Account Settings</LightModeText>
-                      </MenuItem>
-                      <MenuItem>
-                        <LightModeText>Logout</LightModeText>
-                      </MenuItem>
-                    </>
-                  ) : (
-                    <>
-                      <MenuItem>
-                        <DarkModeText type="standard">
-                          Your Servers
-                        </DarkModeText>
-                      </MenuItem>
-                      <MenuItem>
-                        <DarkModeText type="standard">
-                          Account Settings
-                        </DarkModeText>
-                      </MenuItem>
-                      <MenuItem>
-                        <DarkModeText type="standard">Logout</DarkModeText>
-                      </MenuItem>
-                    </>
-                  )}
+                  <MenuItem
+                    color={useColorModeValue("#050017", "#FFC700")}
+                    className="font-inter font-bold text-lg w-700 h-179 max-w-full"
+                  >
+                    <NavLink linkTo="#nav">Home</NavLink>
+                  </MenuItem>
+                  <MenuItem
+                    color={useColorModeValue("#050017", "#FFC700")}
+                    className="font-inter font-bold text-lg w-700 h-179 max-w-full"
+                  >
+                    <NavLink linkTo="#Project1">Things</NavLink>
+                  </MenuItem>
+                  <MenuItem
+                    color={useColorModeValue("#050017", "#FFC700")}
+                    className="font-inter font-bold text-lg w-700 h-179 max-w-full"
+                  >
+                    <NavLink linkTo="#about">About</NavLink>
+                  </MenuItem>
                 </MenuList>
               </Menu>
-            </Stack>
-          </Flex>
+            </Box>
+            <Button onClick={toggleColorMode}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
+          </Stack>
         </Flex>
-      </Box>
-    </>
+      </Flex>
+    </Box>
   );
 }

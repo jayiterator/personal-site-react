@@ -6,7 +6,7 @@ export default function DarkModeHeader({
   children: React.ReactNode;
 }) {
   return (
-    <Text className="font-inter font-bold text-xl text-[#FFC700] w-700 h-179 max-w-full">
+    <Text className="font-inter font-bold text-sm text-[#FFC700] w-700 h-179 max-w-full md:max-2xl:text-xl">
       {children}
     </Text>
   );
