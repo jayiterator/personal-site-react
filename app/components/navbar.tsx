@@ -52,10 +52,9 @@ export default function Nav() {
   return (
     <Box
       bg={useColorModeValue("gray.100", "gray.900")}
-      px={4}
-      w={"full"}
       borderRadius={15}
       id="nav"
+      className=" px-4 min-w-[380px] w-full"
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box>
@@ -91,7 +90,7 @@ export default function Nav() {
             </Box>
 
             {/* md:max-xl:text-xl */}
-            <Box className=" flex sm:max-2xl:hidden ">
+            <Box className=" flex sm:max-2xl:hidden ml-5">
               <Menu>
                 <MenuButton
                   as={IconButton}
