@@ -97,9 +97,9 @@ export default function Nav() {
                   as={IconButton}
                   aria-label="Options"
                   icon={<HamburgerIcon />}
-                  variant="outline"
+                  // variant="outline"
                   color={useColorModeValue("#050017", "#FFC700")}
-                  size={"lg"}
+                  size={"md"}
                 />
                 <MenuList alignItems={"center"}>
                   <MenuItem
