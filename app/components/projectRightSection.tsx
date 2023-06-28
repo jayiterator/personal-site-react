@@ -21,14 +21,14 @@ export default function ProjectRightSection({
       h={700}
       w={"full"}
       marginTop={10}
-      className="flex flex-col p-5 lg:max-2xl:flex-row min-w-fit h-fit"
+      className="flex flex-col p-5 lg:max-final:flex-row min-w-fit h-fit"
     >
       {children}
 
       <Box title="leftSideArea" className="flex flex-col  px-10  basis-3/5 ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-2xl:text-6xl"
+          className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-final:text-6xl"
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
@@ -55,7 +55,7 @@ export default function ProjectRightSection({
         <Box className="flex">
           <Text
             color={useColorModeValue("#050017", "#FFC700")}
-            className="font-Inter font-regular text-l h-fit w-fit max-w-full mt-5 line-clamp-5 lg:max-2xl:flex "
+            className="font-Inter font-regular text-l h-fit w-fit max-w-full mt-5 line-clamp-5 lg:max-final:flex "
             wordBreak={"break-word"}
           >
             <br />

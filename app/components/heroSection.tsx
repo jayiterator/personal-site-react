@@ -15,7 +15,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
       borderWidth={1}
       borderColor={useColorModeValue("gray.500", "gray.700")}
       marginTop={10}
-      className="flex flex-col p-5 w-full lg:max-2xl:flex-row  min-w-fit"
+      className="flex flex-col p-5 w-full lg:max-final:flex-row  min-w-fit"
     >
       {children}
 
@@ -26,7 +26,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
         <Box className=" w-full flex-row ">
           <Heading
             color={useColorModeValue("#050017", "#FFC700")}
-            className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-2xl:text-6xl"
+            className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-final:text-6xl"
             // noOfLines={2}
           >
             Simple Things, Done Well
@@ -34,7 +34,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
           <Box className="basis-1/2 max-w-full ml-2  ">
             <Text
               color={useColorModeValue("#050017", "#FFC700")}
-              className="font-Inter font-regular text-l w-700 h-427 max-w-full mt-5 line-clamp-5 lg:max-2xl:flex"
+              className="font-Inter font-regular text-l w-700 h-427 max-w-full mt-5 line-clamp-5 lg:max-final:flex"
               wordBreak={"break-word"}
             >
               Hi!
@@ -46,14 +46,14 @@ export default function Hero({ children }: { children: React.ReactNode }) {
               Here you will find...
             </Text>
             <Box
-              className="text-center pt-5 hidden lg:max-2xl:block"
+              className="text-center pt-5 hidden lg:max-final:block"
               color={useColorModeValue("#050017", "#FFC700")}
             >
               A collection of simple, digital things made well.
             </Box>
             {/* border-2 border-white */}
             <Box
-              className="text-right pt-5 hidden lg:max-2xl:block "
+              className="text-right pt-5 hidden lg:max-final:block "
               color={useColorModeValue("#050017", "#FFC700")}
             >
               My ode to homegrown, human solutions.
@@ -66,7 +66,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
             borderColor={"#050017"}
             borderRadius={50}
             color={"#050017"}
-            className=" w-[120px] h-[73px] md:max-2xl:w-[200px]"
+            className=" w-[120px] h-[73px] md:max-final:w-[200px]"
           >
             <Link href="#Project1">
               <Button
@@ -75,7 +75,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
                 borderColor={"#050017"}
                 borderRadius={50}
                 color={"#050017"}
-                className=" w-[120px] h-[73px] md:max-2xl:w-[200px]"
+                className=" w-[120px] h-[73px] md:max-final:w-[200px]"
               >
                 Things
               </Button>
@@ -86,7 +86,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
               variant="outline"
               borderColor={"#0030DD"}
               borderRadius={50}
-              className=" w-[120px] h-[73px] md:max-2xl:w-[200px]"
+              className=" w-[120px] h-[73px] md:max-final:w-[200px]"
             >
               About
             </Button>
@@ -107,7 +107,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
             className=" min-w-[300px] "
           />
         </Box>
-        <Text className="font-Inter text-sm lg:max-2xl:text-right font-light text-white h-46  hidden md:max-2xl:block ">
+        <Text className="font-Inter text-sm lg:max-final:text-right font-light text-white h-46  hidden md:max-2xl:block ">
           image ~ https://craftwork.design/downloads/ultima/
         </Text>
       </Box>

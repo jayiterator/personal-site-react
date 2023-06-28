@@ -28,25 +28,28 @@ export default function AboutSection({
       h={650}
       w={"full"}
       marginTop={10}
-      className="flex flex-row"
+      className="flex flex-col p-5 lg:max-final:flex-row min-w-fit h-fit "
       id="about"
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col basis-1/3  ">
+      <Box
+        title="leftSideArea"
+        className=" flex basis-1/2 flex-col items-center  "
+      >
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/8 pt-2 font-Inter font-bold text-6xl w-700 max-w-full pl-5 ml-16"
+          className=" break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-final:text-6xl "
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
           About
         </Heading>
-        <Box className="basis-7/8 py-5 items-center flex flex-col ml-10 ">
+        <Box className=" py-5 items-center flex flex-col w-full ">
           <Image
             src="/images/About1.png"
             alt="Image of Me."
-            className="flex flex-col mb-28"
+            className="flex flex-col mb-6"
             width={200}
           />
           <Image
@@ -79,7 +82,7 @@ export default function AboutSection({
           </Box>
         </Box>
       </Box>
-      <Box title="middleArea" className=" basis-1/2 pt-16 ">
+      <Box title="middleArea" className=" basis-1/2 pt-2 lg:max-final:pt-16 ">
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
           className=" font-Inter font-regular text-sm w-750 h-427 max-w-full pt-5"
@@ -136,13 +139,12 @@ export default function AboutSection({
       </Box>
       <Box
         title="rightSideArea"
-        className="flex flex-col w-1/2 items-center justify-end mb-10 "
+        className="flex flex-col items-center justify-end mb-10 p-5"
       >
         <Image
           src="/images/About2.png"
           alt="Image of Me."
-          className="flex flex-col pb-5"
-          width={350}
+          className=" min-w-[285px] w-[300px]"
         />
       </Box>
     </Box>
