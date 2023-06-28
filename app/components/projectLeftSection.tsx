@@ -36,7 +36,7 @@ export default function ProjectLeftSection({
           />
         </Box>
       </Box>
-      <Box title="rightSideArea" className=" w-full flex flex-col px-10 h-fit">
+      <Box title="rightSideArea" className=" w-full flex flex-col px-10 h-fit ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
           className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-2xl:text-6xl"
