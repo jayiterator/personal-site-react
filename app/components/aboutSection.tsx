@@ -35,7 +35,7 @@ export default function AboutSection({
 
       <Box
         title="leftSideArea"
-        className=" flex basis-1/2 flex-col items-center  "
+        className=" flex basis-1/2 flex-col items-center px-8 "
       >
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}

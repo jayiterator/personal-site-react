@@ -47,12 +47,17 @@ export default function Footer({ children }: { children: React.ReactNode }) {
       h={300}
       w={"full"}
       marginTop={10}
-      className="flex flex-col"
+      className="flex flex-col p-5 lg:max-final:flex-row min-w-fit h-fit"
       id="footer"
     >
       {children}
-      <Box className=" basis-1/5 px-5 w-3/4">
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box className=" flex px-10 w-full ">
+        <Flex
+          h={16}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          className=" w-full "
+        >
           <Box>
             {colorMode === "light" ? (
               <LightModeHeader>Simple Digital Things</LightModeHeader>
@@ -90,8 +95,8 @@ export default function Footer({ children }: { children: React.ReactNode }) {
           )}
         </Flex>
       </Box>
-      <Box className=" basis-4/5 flex justify-end px-5 ">
-        <Box className=" flex flex-row h-44 bg-[#F1F1F1] rounded-lg self-center basis-1/3">
+      <Box className=" basis-1/5 flex justify-end px-5 ">
+        <Box className=" flex flex-row h-44 bg-[#F1F1F1] rounded-lg self-center min-w-[285px]">
           <Box className="flex flex-col basis-2/5 justify-around items-center py-5 ">
             <Box className="flex flex-row">
               <Link href="https://www.linkedin.com/in/jayson-paul-63762b79/">
