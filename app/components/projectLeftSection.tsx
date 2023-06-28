@@ -22,23 +22,24 @@ export default function ProjectLeftSection({
       h={700}
       w={"full"}
       marginTop={10}
-      className="flex flex-row"
+      className="flex flex-col p-5 lg:max-2xl:flex-row min-w-fit h-fit "
       id={id}
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col w-1/2  items-center ">
-        <Image
-          src={projectImage}
-          alt="Image of three developed phone app screens."
-          className="flex flex-col"
-          width={480}
-        />
+      <Box title="leftSideArea" className=" w-full  items-center  ">
+        <Box className=" flex items-center justify-center w-full">
+          <Image
+            src={projectImage}
+            alt="Image of three developed phone app screens."
+            className=" min-w-[330px] w-[450px] "
+          />
+        </Box>
       </Box>
-      <Box title="rightSideArea" className="flex flex-col w-1/2 ">
+      <Box title="rightSideArea" className=" w-full flex flex-col px-10 h-fit">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
-          className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  ml-16"
+          className="basis-1/4 break-normal p-2 font-Inter w-11/12 font-bold text-3xl max-w-full md:max-2xl:text-6xl"
           //   noOfLines={2}
           wordBreak={"break-word"}
         >
@@ -46,14 +47,14 @@ export default function ProjectLeftSection({
         </Heading>
         <Text
           color={useColorModeValue("#050017", "#FFC700")}
-          className="p-2 font-Inter font-regular text-l w-750 h-427 max-w-full ml-14"
+          className="p-2 font-Inter font-regular text-l w-750 h-427 max-w-full "
           wordBreak={"break-word"}
         >
           Stack:
           <br />
           <br />
         </Text>
-        <Box className="ml-16">
+        <Box className="ml-2">
           <Image
             src={techStack}
             alt="Image of three developed phone app screens."
@@ -61,14 +62,16 @@ export default function ProjectLeftSection({
             width={480}
           />
         </Box>
-        <Text
-          color={useColorModeValue("#050017", "#FFC700")}
-          className="pt-4 p-2 font-Inter font-regular text-l w-750 h-427 max-w-full ml-14"
-          wordBreak={"break-word"}
-        >
-          <br />
-          {blurbText}
-        </Text>
+        <Box className="flex">
+          <Text
+            color={useColorModeValue("#050017", "#FFC700")}
+            className="font-Inter font-regular text-l h-fit w-fit max-w-full mt-5 line-clamp-5 lg:max-2xl:flex "
+            wordBreak={"break-word"}
+          >
+            <br />
+            {blurbText}
+          </Text>
+        </Box>
       </Box>
     </Box>
   );

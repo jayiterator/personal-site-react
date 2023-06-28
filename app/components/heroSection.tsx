@@ -104,7 +104,7 @@ export default function Hero({ children }: { children: React.ReactNode }) {
             // className="flex flex-col"
             width={400}
             height={380}
-            className=" min-w-400 "
+            className=" min-w-[300px] "
           />
         </Box>
         <Text className="font-Inter text-sm lg:max-2xl:text-right font-light text-white h-46  hidden md:max-2xl:block ">

@@ -25,7 +25,7 @@ export default function ProjectRightSection({
     >
       {children}
 
-      <Box title="leftSideArea" className="flex flex-col w-1/2 ">
+      <Box title="leftSideArea" className="flex flex-col w-1/2  ">
         <Heading
           color={useColorModeValue("#050017", "#FFC700")}
           className="basis-1/4 p-2 font-Inter font-bold text-6xl w-700 max-w-full  ml-16"
