@@ -1,15 +1,19 @@
 "use client";
 
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import Footer from "./components/footer";
 import Hero from "./components/heroSection";
 import Nav from "./components/navbar";
 import ProjectLeftSection from "./components/projectLeftSection";
 import ProjectRightSection from "./components/projectRightSection";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import AboutSection from "./components/aboutSection";
 
 export default function Home() {
+  const { colorMode } = useColorMode();
+  useEffect(() => {
+    colorMode === "dark";
+  }, [colorMode]);
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#050017]">
     //   <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
