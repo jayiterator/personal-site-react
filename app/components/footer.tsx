@@ -51,7 +51,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
       id="footer"
     >
       {children}
-      <Box className=" flex px-10 w-full ">
+      <Box className=" flex px-10 w-full py-2 ">
         <Flex
           h={16}
           alignItems={"center"}
