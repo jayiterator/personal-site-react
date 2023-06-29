@@ -95,30 +95,30 @@ export default function Footer({ children }: { children: React.ReactNode }) {
           )}
         </Flex>
       </Box>
-      <Box className=" basis-1/5 flex justify-end px-5 ">
-        <Box className=" flex flex-row h-44 bg-[#F1F1F1] rounded-lg self-center min-w-[285px]">
+      <Box className=" basis-2/5 flex justify-end  ">
+        <Box className=" flex flex-row p-2 w-full bg-[#F1F1F1] rounded-lg self-center min-w-[285px]">
           <Box className="flex flex-col basis-2/5 justify-around items-center py-5 ">
             <Box className="flex flex-row">
               <Link href="https://www.linkedin.com/in/jayson-paul-63762b79/">
                 <Image
                   src="/images/LinkedIn.png"
                   alt="Image of Me."
-                  className="flex flex-col mx-2"
+                  className="flex flex-col min-w-[10px] mx-2 "
                   width={10}
                 />
               </Link>
-              <Text className="text-black"> LinkedIn</Text>
+              <Text className="text-black text-sm mx-4"> LinkedIn</Text>
             </Box>
             <Box className="flex flex-row">
               <Link href="https://github.com/jayiterator">
                 <Image
                   src="/images/github.png"
                   alt="Image of Me."
-                  className="flex flex-col mx-2"
+                  className="flex flex-col min-w-[10px] mx-2 "
                   width={10}
                 />
               </Link>
-              <Text className="text-black"> Github</Text>
+              <Text className="text-black text-sm mx-4"> Github</Text>
             </Box>
           </Box>
           <Box className="flex flex-col items-center basis-3/5 justify-around">

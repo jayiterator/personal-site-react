@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "PersonalSite",
+  title: "Simple Digital Things",
   description: "NextJS, TypeScript, ChakraUI, TailwindCSS.",
 };
 
