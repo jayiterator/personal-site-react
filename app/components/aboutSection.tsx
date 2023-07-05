@@ -92,13 +92,13 @@ export default function AboutSection({
           <br />
           <br />
           Born and raised in the twin-island republic of Trinidad and Tobago,
-          I’ve studied, lived and work in Massachusetts at Amherst College. From
+          I’ve studied, lived and worked in Massachusetts at Amherst College. From
           there I continued my career in Beijing, China for three and a half
           years.
           <br />
           <br />
           Feeling the necessity of further expanding my skills and experiences I
-          enrolled in and completed my Masters in IT software development at
+          enrolled in and have now completed my Masters in IT software development at
           Swinburne University of Technology in Melbourne, where I currently
           reside and am building my career.
           <br />
