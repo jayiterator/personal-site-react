@@ -120,7 +120,7 @@ export default function AboutSection({
           inherent meaning--and we should love and judge it for its ability to
           suit the human purposes we give it.
           <br />
-             <br />
+          <br />
         </Text>
         <Box
           className="text-right text-sm"
